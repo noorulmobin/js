@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom2</title>
+</head>
+<body  style="background-color: black ;color: white; ">
+    
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    function addlang(lang){
+        const li=document.createElement('li')
+        li.innerHTML=`${lang}`
+
+        document.querySelector('.language').appendChild(li)
+    }
+    addlang("python")
+    addlang("rubi")
+
+        function addlang(lang){
+            const li=document.createElement('li');
+            li.appendChild(document.createTextNode(lang))
+            document.querySelector('.language').appendChild(li)
+        }
+        addlang("ruby")
+
+        // edit 
+
+    //    const change= document.querySelector('li:nth-child(2)');
+    //     // change.innerHTML="mojo"
+    //     const newli=document.createElement('li')
+    //     newli.textContent="mojo"
+
+        // change.replaceWith(newli)
+
+        const change= document.querySelector('li:nth-child(1)');
+        // change.innerHTML="mojo"
+        const newli=document.createElement('li')
+        newli.textContent="typescript"
+
+        change.replaceWith(newli)
+
+
+        //remove
+
+        const lastLang=document.querySelector('li:last-child')
+        lastLang.remove()
+</script>
+</html>
